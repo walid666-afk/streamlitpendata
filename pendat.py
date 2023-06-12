@@ -117,32 +117,32 @@ if selected == "Principal Component Analysis":
     X_train_pca, X_test_pca, y_train_pca, y_test_pca = train_test_split(
         X_pca, y_pca, test_size=0.2, random_state=42)
 
-    # Sklearn PCA Naive Bayes
-    st.subheader("Sklearn PCA Naive Bayes")
+    # PCA Naive Bayes
+    st.subheader("PCA Naive Bayes")
     nb_pca = GaussianNB()
     nb_pca.fit(X_train_pca, y_train_pca)
     y_pred_nb_pca = nb_pca.predict(X_test_pca)
     accuracy_nb_pca = accuracy_score(y_test_pca, y_pred_nb_pca)
     st.write("Accuracy:",100 * accuracy_nb_pca)
 
-    # Sklearn PCA KNN
-    st.subheader("Sklearn PCA KNN")
+    # PCA KNN
+    st.subheader("PCA KNN")
     knn_pca = KNeighborsClassifier()
     knn_pca.fit(X_train_pca, y_train_pca)
     y_pred_knn_pca = knn_pca.predict(X_test_pca)
     accuracy_knn_pca = accuracy_score(y_test_pca, y_pred_knn_pca)
     st.write("Accuracy:",100 * accuracy_knn_pca)
 
-    # Sklearn PCA Decision Tree
-    st.subheader("Sklearn PCA Decision Tree")
+    # PCA Decision Tree
+    st.subheader("PCA Decision Tree")
     dt_pca = DecisionTreeClassifier()
     dt_pca.fit(X_train_pca, y_train_pca)
     y_pred_dt_pca = dt_pca.predict(X_test_pca)
     accuracy_dt_pca = accuracy_score(y_test_pca, y_pred_dt_pca)
     st.write("Accuracy:",100 * accuracy_dt_pca)
 
-    # Sklearn PCA ANNBP
-    st.subheader("Sklearn PCA ANNBP")
+    # PCA ANNBP
+    st.subheader("PCA ANNBP")
     annbp_pca = MLPClassifier()
     annbp_pca.fit(X_train_pca, y_train_pca)
     y_pred_annbp_pca = annbp_pca.predict(X_test_pca)
